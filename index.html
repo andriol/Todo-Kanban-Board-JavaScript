@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO-DO LIST</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="container"></div>
+    <div class="kanban__container">
+      <ol class="kanban To-do" id="0">
+        <h2><i class="material-icons">report_problem</i> To do</h2>
+        <ul id="To-Do" class="draggable-list"></ul>
+      </ol>
+      <ol class="kanban progress" id="1">
+        <h2><i class="material-icons">build</i> In progress</h2>
+        <ul id="progress" class="draggable-list"></ul>
+      </ol>
+      <ol class="kanban done" id="2">
+        <h2><i class="material-icons">check_circle</i> Done</h2>
+        <ul id="done" class="draggable-list"></ul>
+      </ol>
+      <ol class="kanban gone" id="3">
+        <h2><i class="material-icons">delete</i> Gone</h2>
+        <ul id="gone" class="draggable-list"></ul>
+      </ol>
+    </div>
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,237 @@
+:root {
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 77%, 27%);
+  --clr-primary-3: hsl(205, 72%, 37%);
+  --clr-primary-4: hsl(205, 63%, 48%);
+  --clr-primary-5: hsl(205, 78%, 60%);
+  --clr-primary-6: hsl(205, 89%, 70%);
+  --clr-primary-7: hsl(205, 90%, 76%);
+  --clr-primary-8: hsl(205, 86%, 81%);
+  --clr-primary-9: hsl(205, 90%, 88%);
+  --clr-primary-10: hsl(205, 100%, 96%);
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: #222;
+  --ff-primary: 'Roboto', sans-serif;
+  --ff-secondary: 'Open Sans', sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-wid: 620px;
+}
+
+body {
+  font-family: Roboto;
+  background: -webkit-linear-gradient(90deg, #2bc0e4 10%, #eaecc6 90%);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  background: #2980b9;
+  color: white;
+  margin: 0;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.fa-plus {
+  float: right;
+  background: transparent;
+  border-color: transparent;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.fa-plus:hover {
+  color: var(--clr-primary-1);
+  transform: rotate(90deg);
+}
+li {
+  background: #fff;
+  height: 40px;
+  line-height: 40px;
+  color: #666;
+}
+
+span {
+  background: #e74c3c;
+  height: 40px;
+  margin-right: 20px;
+  text-align: center;
+  color: white;
+  width: 0;
+  display: inline-block;
+  transition: 0.2s linear;
+  opacity: 0;
+}
+span:nth-child(2) {
+  background: green;
+  height: 40px;
+  margin-right: 20px;
+  text-align: center;
+  color: white;
+  width: 0;
+  display: inline-block;
+  transition: 0.2s linear;
+  opacity: 0;
+}
+li:hover span {
+  width: 40px;
+  opacity: 1;
+}
+
+input {
+  font-size: 18px;
+  color: #2980b9;
+  background-color: #f7f7f7;
+  width: 100%;
+  padding: 13px 13px 13px 20px;
+  box-sizing: border-box;
+  border: 3px solid rgba(0, 0, 0, 0);
+}
+
+input:focus {
+  background: #fff;
+  border: 3px solid #2980b9;
+  outline: none;
+}
+
+#container {
+  width: 360px;
+  margin: 100px auto;
+  background: #f7f7f7;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.todo__list-item {
+  text-transform: capitalize;
+}
+.todo__list-date {
+  text-align: right;
+  font-style: italic;
+  color: #aaaaaa;
+  border-bottom: 1px dotted black;
+  padding-right: 1rem;
+}
+/* ///////////// */
+
+ol.list.To-do {
+  border-left: 2px solid #ffb300;
+}
+
+ol.list.Gone {
+  border-left: 2px solid #ff3d00;
+}
+
+ol.list.progress {
+  border-left: 2px solid #29b6f6;
+}
+
+ol.list.Done {
+  border-left: 2px solid #8bc34a;
+}
+
+h2 {
+  margin-left: 5px;
+  font-family: 'Arbutus Slab', serif;
+}
+
+h2 {
+  color: #607d8b;
+}
+
+h2 .material-icons {
+  color: #b0bec5;
+  line-height: 1.5;
+}
+
+ol.kanban.To-do {
+  border-top: 5px solid #ffb300;
+}
+
+ol.kanban.gone {
+  border-top: 5px solid #ff3d00;
+}
+
+ol.kanban.progress {
+  border-top: 5px solid #29b6f6;
+}
+
+ol.kanban.done {
+  border-top: 5px solid #8bc34a;
+}
+
+ol.kanban {
+  border-top: 5px solid #78909c;
+  width: 20%;
+  height: auto;
+  margin: 1%;
+  max-width: 250px;
+  min-width: 120px;
+  display: inline-block;
+  vertical-align: top;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  flex-direction: column;
+  min-height: 200px;
+  z-index: 1;
+  position: relative;
+  background: #fff;
+  padding: 1em;
+  border-radius: 2px;
+}
+.kanban__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.todo__container-kanban {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 590px) {
+  .todo__container-kanban {
+    width: 8rem;
+  }
+}
+.todo__list-kanban {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  font-family: 'Dancing Script';
+  font-weight: bold;
+}
+.todo__date-kanban {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+#gone {
+  text-decoration: line-through;
+}
